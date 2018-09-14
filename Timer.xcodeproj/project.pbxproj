@@ -14,6 +14,7 @@
 		6F5DFF62205979A000F966A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F5DFF60205979A000F966A1 /* LaunchScreen.storyboard */; };
 		6F5DFF6D205979A000F966A1 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5DFF6C205979A000F966A1 /* TimerTests.swift */; };
 		6F5DFF78205979A000F966A1 /* TimerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F5DFF77205979A000F966A1 /* TimerUITests.swift */; };
+		6F5DFF87205979E800F966A1 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F5DFF86205979E800F966A1 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		6F5DFF73205979A000F966A1 /* TimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F5DFF77205979A000F966A1 /* TimerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUITests.swift; sourceTree = "<group>"; };
 		6F5DFF79205979A000F966A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F5DFF86205979E800F966A1 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		6F5DFF88205981F900F966A1 /* Timer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Timer.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F5DFF87205979E800F966A1 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +85,7 @@
 				6F5DFF6B205979A000F966A1 /* TimerTests */,
 				6F5DFF76205979A000F966A1 /* TimerUITests */,
 				6F5DFF55205979A000F966A1 /* Products */,
+				6F5DFF85205979E800F966A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +102,7 @@
 		6F5DFF56205979A000F966A1 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
+				6F5DFF88205981F900F966A1 /* Timer.entitlements */,
 				6F5DFF57205979A000F966A1 /* AppDelegate.swift */,
 				6F5DFF59205979A000F966A1 /* ViewController.swift */,
 				6F5DFF5B205979A000F966A1 /* Main.storyboard */,
@@ -123,6 +129,14 @@
 				6F5DFF79205979A000F966A1 /* Info.plist */,
 			);
 			path = TimerUITests;
+			sourceTree = "<group>";
+		};
+		6F5DFF85205979E800F966A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F5DFF86205979E800F966A1 /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +208,17 @@
 					6F5DFF53205979A000F966A1 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.HomeKit = {
+								enabled = 0;
+							};
+						};
 					};
 					6F5DFF67205979A000F966A1 = {
 						CreatedOnToolsVersion = 9.2;
@@ -427,7 +452,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QX9AC3J6FG;
 				INFOPLIST_FILE = Timer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zidane.Timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -441,7 +468,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = QX9AC3J6FG;
 				INFOPLIST_FILE = Timer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zidane.Timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
